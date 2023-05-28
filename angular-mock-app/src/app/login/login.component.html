@@ -1,0 +1,58 @@
+<p class="loginRibbon">
+    <mat-toolbar style="background-color: orange; width: 95%;">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Login</span>
+      <span class="example-spacer"></span>
+      <a href="https://chat.openai.com/" target="_blank">
+        <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+        >
+            <mat-icon>favorite</mat-icon>
+        </button>
+    </a>
+    <a href="https://web.yammer.com/" target="_blank">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </a>
+    </mat-toolbar>
+  </p>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" class="ttt">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+      <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+        <div *ngIf="loginForm.controls['email'].errors?.['required']">Email is required</div>
+        <div *ngIf="loginForm.controls['email'].errors?.['email']">Invalid email format</div>
+      </div>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" />
+      <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+        <div *ngIf="loginForm.controls['password'].errors?.['required']">Password is required</div>
+      </div>
+    </mat-form-field>
+  
+    <section>
+      <div class="example-label"></div>
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+          Login
+        </button>
+      </div>
+    </section>
+  </form>
+
+  <h1 [(ngModel)]="unauthorised"> </h1>
+  

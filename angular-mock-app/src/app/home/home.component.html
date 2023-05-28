@@ -1,0 +1,15 @@
+<div class="container" style="background-color: darkgrey; padding: 20px;">
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter URL:</mat-label>
+        <input matInput type="text" placeholder="Enter URL" #urlInput>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="getShortenedUrl(urlInput.value)">Shorten URL</button>
+    <mat-card *ngIf="shortenedUrl" class="mt-2">
+      <mat-card-content style="color: white;">
+        Shortened URL: {{ shortenedUrl }}
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

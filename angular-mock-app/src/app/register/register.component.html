@@ -1,0 +1,72 @@
+<p class="registerRibbon">
+    <mat-toolbar style="background-color: orange; width: 65%">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Register</span>
+      <span class="example-spacer"></span>
+      <a href="https://chat.openai.com/" target="_blank">
+        <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+        >
+            <mat-icon>favorite</mat-icon>
+        </button>
+    </a>
+    <a href="https://web.yammer.com/" target="_blank">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </a>
+    </mat-toolbar>
+  </p>
+  <form class="ttt" #userForm="ngForm" (ngSubmit)="formClicked(userForm)">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput name="email" [(ngModel)]="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+    </mat-form-field>
+    <span class="example-spacer"></span>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput name="Address" />
+    </mat-form-field>
+    <span class="example-spacer"></span>
+    <mat-form-field>
+      <mat-label>Acc. Number</mat-label>
+      <input matInput name="Acc_number" required/>
+    </mat-form-field>
+    <span class="example-spacer"></span>
+    <mat-form-field>
+        <mat-label>Mobile Number</mat-label>
+        <input matInput name="number" [(ngModel)]="number" required minlength="10"/>
+      </mat-form-field>
+      <span class="example-spacer"></span>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput name="Password" [(ngModel)]="password" required minlength="8"/>
+      </mat-form-field>
+      <span class="example-spacer"></span>
+    <section>
+      <div class="example-label"></div>
+      <div class="example-button-row">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [hidden]="userForm.invalid" 
+        >
+          Register
+        </button>
+      </div>
+    </section>
+  </form>
+  

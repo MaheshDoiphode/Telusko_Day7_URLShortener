@@ -1,0 +1,19 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.loginRibbon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ttt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+  }
+  
+  .ttt mat-form-field {
+    width: 35%; /* Set the width to 100% */
+  }
