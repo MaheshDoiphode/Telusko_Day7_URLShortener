@@ -1,27 +1,33 @@
-# AngularMockApp
+# Angular Shorten URL App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Sure! Here's an explanation of the flow of the URL Shortener project, written in simple and beginner-friendly language:
 
-## Development server
+1. To run the project, make sure you have Node.js installed on your computer. You can download it from the Node.js website (https://nodejs.org).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. After downloading the project from the GitHub repository, follow these steps:
 
-## Code scaffolding
+   a) Open a special window on your computer called "terminal" or "command prompt".
+   
+   b) Go to the folder where you want to keep the project by typing `cd <folder-path>`. Replace `<folder-path>` with the actual location of the folder on your computer.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   c) Install all the necessary parts of the project by typing `npm install`. This will make sure everything is set up correctly.
 
-## Build
+   d) Build the project by typing `ng build`. It will compile all the code and prepare it for running.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   e) Finally, serve the project by typing `ng serve`. This will start a local server so you can see and interact with the project in your web browser.
 
-## Running unit tests
+3. Now, let's understand how the project works:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   a) When you open the website, you will see a form where you can enter a long URL that you want to shorten. It's like a magic wand to make your URL shorter and easier to share!
 
-## Running end-to-end tests
+   b) When you click the "Shorten URL" button, the website will talk to a special part called the backend. This backend is like the brain of our project.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   c) The backend will generate a unique, short URL for your long URL. It's like giving your long URL a special nickname.
 
-## Further help
+   d) The backend will also remember the connection between the long URL and the short URL. It's like keeping a secret list so we can remember the original URL later.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   e) Once the backend generates the short URL, it will send it back to the website. You will see the short URL displayed on the screen, ready to be copied and shared!
+
+   f) When someone clicks on the short URL, the website will know and redirect them to the original long URL. It's like a secret code that unlocks the original URL.
+
+That's it! You now have a URL Shortener project up and running. It's like having a magical tool to make your URLs shorter and easier to handle. Enjoy using it and sharing your shortened URLs with others!
